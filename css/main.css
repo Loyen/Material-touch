@@ -1,0 +1,92 @@
+body 
+{ 
+  background: #333; 
+  color: #DDD; 
+  font-family: sans-serif;
+  font-size: 100%;
+
+  margin-bottom: 48px; 
+  margin-top: 48px; 
+  text-align: center;
+}
+
+.container { max-width: 960px; margin: 0 auto; }
+
+.btn
+{
+  display: inline-block;
+  background: #eee;
+  border: 0;
+  border-radius: 0.1em;
+  color: #333;
+  margin: 0.1em;
+  outline: 0;
+}
+
+.btn:active
+{
+  opacity: 1;
+}
+
+.btn-l { font-size: 2em; }
+
+.md-ripple
+{
+  overflow: hidden;
+  position: relative;
+}
+
+.md-ripple-effect
+{
+  pointer-events: none;
+  position: absolute;
+
+  display: block;
+  background: #000;
+
+  width: 0;
+  height: 0;
+
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.md-ripple-blue .md-ripple-effect,
+.md-ripple-blue .md-ripple-effect,
+.md-ripple-blue .md-ripple-effect,
+.md-ripple.blue .md-ripple-effect
+{
+  background: #32C8C8;
+}
+
+.md-ripple-green .md-ripple-effect,
+.md-ripple-green .md-ripple-effect,
+.md-ripple-green .md-ripple-effect,
+.md-ripple.green .md-ripple-effect
+{
+  background: #19C832;
+}
+
+.md-ripple-yellow .md-ripple-effect,
+.md-ripple-yellow .md-ripple-effect,
+.md-ripple-yellow .md-ripple-effect,
+.md-ripple.yellow .md-ripple-effect 
+{ 
+  background: #C8C832;
+}
+
+.md-ripple-red .md-ripple-effect,
+.md-ripple-red .md-ripple-effect,
+.md-ripple-red .md-ripple-effect,
+.md-ripple.red .md-ripple-effect
+{
+  background: #C83219;
+}
+
+.md-ripple-white .md-ripple-effect,
+.md-ripple-white .md-ripple-effect,
+.md-ripple-white .md-ripple-effect,
+.md-ripple.white .md-ripple-effect
+{
+  background: #eee;
+}
