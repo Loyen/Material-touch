@@ -11,7 +11,8 @@ function materialTouch(rippleIdentifier, custom_options){
       duration: 600
     },
     opacity: 0.5,
-    size: 1
+    size: 0.75,
+    center: false
   };
 
   this.options = {};
@@ -55,7 +56,9 @@ function materialTouch(rippleIdentifier, custom_options){
       clickY = e.offsetY,
       rippleWrapper = item.querySelector('.'+options.classes.rippleContainer),
       ripple,
-      size = (item.offsetWidth > item.offsetHeight ? item.offsetWidth : item.offsetHeight)*options.size;
+      width = item.offsetWidth,
+      height = item.offsetHeight,
+      size = (width > height ? width : height)*options.size;
 
       if (!rippleWrapper){
         rippleWrapper = document.createElement('div');
@@ -75,9 +78,17 @@ function materialTouch(rippleIdentifier, custom_options){
 
       rippleWrapper.appendChild(ripple);
 
+      var newX = (clickX-(size/2)),
+          newY = (clickY-(size/2));
+
+      if (options.center) {
+        newX = (width/2)-(size/2);
+        newY = (height/2)-(size/2);
+      }
+
       self.animate(ripple, {
-        top: (clickY-(size/2))+'px', 
-        left: (clickX-(size/2))+'px',
+        top: newY+'px', 
+        left: newX+'px',
         width: size+'px', 
         height: size+'px'
       });

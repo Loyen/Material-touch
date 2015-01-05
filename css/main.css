@@ -36,6 +36,11 @@ body
   position: relative;
 }
 
+.md-ripple *
+{
+  pointer-events: none;
+}
+
 .md-ripple-effect
 {
   pointer-events: none;
